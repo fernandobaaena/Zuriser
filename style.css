@@ -55,11 +55,8 @@ p {
 footer {
     margin-top: auto;
     padding: 1rem;
-    background-color: rgb(121, 206, 243);
     color: white;
     text-align: center;
-    width: 100%;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 nav, .nav-bar {
@@ -108,22 +105,53 @@ a:hover {
     cursor: pointer;
 }
 
+.home-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home{
+    height: 85svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us, #contact{
+    background-color: antiquewhite;
+}
+#about-us{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+footer{
+    background-color: rgb(121, 206, 243);
+}
+section{
+    flex-direction: column;
+}
+
 @media screen and (max-width: 768px) {
     .nav-bar {
         display: none;
         flex-direction: column;
         width: 100%;
-        position: absolute;
         top: 15svh;
+        height: 5svh;
         left: 0;
         background-color: rgb(121, 206, 243);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.459);
     }
 
     .nav-bar.active {
         display: flex;
+        height: 50%;
     }
 
     .menu-icon {
         display: block;
     }
+
 }
