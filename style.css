@@ -112,6 +112,13 @@ a:hover {
     align-items: center;
 }
 
+.main-text{
+    background-color: #0066cc;
+    color: white;
+    padding: 2%;
+    border-radius: 2%;
+}
+
 #home{
     height: 85svh;
     display: flex;
@@ -131,6 +138,13 @@ footer{
 }
 section{
     flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: #004085;
+}
+.tittle-home{
+    font-size: 550%;
 }
 
 @media screen and (max-width: 768px) {
@@ -152,6 +166,9 @@ section{
 
     .menu-icon {
         display: block;
+    }
+    .tittle-home{
+        font-size: 350%;
     }
 
 }
