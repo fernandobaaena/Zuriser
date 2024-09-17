@@ -166,12 +166,125 @@ a{
         display: flex;
         height: 50%;
     }
-
     .menu-icon {
         display: block;
     }
-    .tittle-home{
-        font-size: 350%;
+    .tittle-home {
+        font-size: 2.5rem; 
     }
 
+    .section {
+        padding: 3% 5%;
+    }
+    .main-text {
+        font-size: 1rem; 
+        padding: 5%;      
+        text-align: center; 
+    }
+}
+
+/* -------------------Animaciones-------------- */
+/* Animaciones generales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animación en las secciones */
+.section {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Animación para títulos */
+h1, h2 {
+    animation: slideIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Ajusta la animación para que h1 y h2 aparezcan en momentos diferentes */
+h1 {
+    animation-delay: 0.2s;
+}
+
+h2 {
+    animation-delay: 0.4s;
+}
+
+/* Animaciones en los párrafos */
+p {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Links animados con hover */
+a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #ff6600;
+    transform: scale(1.1);
+}
+
+/* Logo con animación de escalado */
+.zuriser-logo {
+    animation: scaleUp 1.2s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.1s;
+}
+
+/* Transición para las sombras del header */
+header {
+    transition: box-shadow 0.5s ease;
+}
+
+/* Animación de entrada suave para las imágenes */
+img {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Para hacer las secciones visibles al hacer scroll */
+.section.visible {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+/* Transición para las sombras del header */
+header {
+    transition: box-shadow 0.5s ease;
 }

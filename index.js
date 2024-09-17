@@ -21,3 +21,4 @@ document.querySelectorAll('.nav-bar li a').forEach(link => {
         navBar.classList.remove('active');  // Cierra el menú
     });
 });
+
